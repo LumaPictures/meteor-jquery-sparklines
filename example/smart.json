@@ -4,9 +4,7 @@
     "branch": "master"
   },
   "packages": {
-    "sparklines": {
-      "path": "packages/sparklines"
-    },
+    "sparklines": {},
     "githubReadme": {},
     "proxino": {},
     "pageguide": {},
