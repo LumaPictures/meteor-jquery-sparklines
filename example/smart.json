@@ -1,0 +1,15 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master"
+  },
+  "packages": {
+    "sparklines": {
+      "path": "packages/sparklines"
+    },
+    "githubReadme": {},
+    "proxino": {},
+    "pageguide": {},
+    "bootboxjs": {}
+  }
+}

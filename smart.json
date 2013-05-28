@@ -1,0 +1,9 @@
+{
+    "name": "sparklines",
+    "description": "An interactive guide for web page element using jQuery and CSS3",
+    "homepage": "https://github.com/austinrivas/meteor-sparklines",
+    "author": "Austin Rivas  (https://github.com/austinrivas)",
+    "version": "1.0.0",
+    "git": "https://github.com/austinrivas/meteor-sparklines.git",
+    "packages" : {}
+}
