@@ -1,4 +1,4 @@
-meteor-sparkliness
+meteor-sparklines
 =================
 
 This jQuery plugin generates sparkliness (small inline charts) directly in the browser using data supplied either inline in the HTML, or via javascript.
@@ -30,6 +30,13 @@ See jQuery Sparklines Official Documentation : https://github.com/tracelytics/sp
 $ git clone git://github.com/austinrivas/meteor-sparklines.git
 $ cd meteor-sparklines/example
 $ mrt
+```
+
+### Tests
+``` sh
+$ git clone git://github.com/austinrivas/meteor-sparklines.git
+$ cd meteor-sparklines
+$ mrt test-packages ./
 ```
 
 ### TODOS

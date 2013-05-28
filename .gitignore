@@ -40,6 +40,11 @@ Thumbs.db
 # Meteor #####################
 */.meteor/local
 */*/.meteor/local
+example/.DS_Store
+.idea/*
+smart.lock
 
-*/.idea
 
+example/.DS_Store
+
+example/.DS_Store
