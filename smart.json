@@ -1,6 +1,6 @@
 {
     "name": "sparklines",
-    "description": "An interactive guide for web page element using jQuery and CSS3",
+    "description": "This jQuery plugin generates sparkliness (small inline charts) directly in the browser using data supplied either inline in the HTML, or via javascript",
     "homepage": "https://github.com/austinrivas/meteor-sparklines",
     "author": "Austin Rivas  (https://github.com/austinrivas)",
     "version": "1.0.0",
