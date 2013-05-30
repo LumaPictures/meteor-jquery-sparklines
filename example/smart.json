@@ -8,6 +8,9 @@
     "githubReadme": {},
     "proxino": {},
     "pageguide": {},
-    "bootboxjs": {}
+    "bootboxjs": {},
+    "packages-bootstrap": {
+        "path": "packages/packages-bootstrap"
+    }
   }
 }
