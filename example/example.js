@@ -2,6 +2,14 @@ if (Meteor.isClient) {
     Proxino.key = "1WSzwlGhsocB-hDA0-iHUg";
     Proxino.track_errors();
 
+    var config = {
+        repo: "meteor-sparklines",
+        owner: "austinrivas",
+        atmosphere: "sparklines"
+    }
+
+    new packagesBootstrap(config).set();
+
     Template.sparklines.created =  function () {
         var currentPageguide = {
             id: "jQuery.PageGuide",
@@ -10,32 +18,32 @@ if (Meteor.isClient) {
                 {
                     target: ".sparklines",
                     content: "These sparklines are rerendered whenever their reactive context is rerendered, in this case it is the sparklines handlebars template",
-                    direction: "top"
+                    direction: "left"
                 },
                 {
                   target: ".code",
                   content: "This is the actual Meteor code used on this page",
-                  direction: "top"
+                  direction: "left"
                 },
                 {
-                  target: ".readme",
-                  content: "This should point you towards all the docs you need",
-                  direction: "top"
+                    target: ".readme",
+                    content: "This should point you towards all the docs you need",
+                    direction: "left"
                 },
                 {
                     target: ".github",
                     content: "Click here view this project on github",
-                    direction: "top"
+                    direction: "bottom"
                 },
                 {
                     target: ".atmosphere",
                     content: "This project is also available on the Atmosphere Meteorite package repository",
-                    direction: "top"
+                    direction: "bottom"
                 },
                 {
                     target: ".profile",
                     content: "Here is a link to my github profile for all you stalkers",
-                    direction: "top"
+                    direction: "bottom"
                 }
             ]}
         $.pageguide(currentPageguide);
