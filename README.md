@@ -8,19 +8,19 @@ jQuery Sparklines Official Documentation : http://omnipotent.net/jquery.sparklin
 ## [ Live Example ](http://sparklines.meteor.com)
 ## [ Annotated Source ](http://austinrivas.github.io/meteor-sparklines/)
 
+## Usage
+```
+{{> sparkline
+    selector=example.selector
+    data=example.data
+    options=example.options
+}}
+```
+
 ## Installing sparklines using Meteorite
 
 ```
 $ mrt add sparklines
-```
-
-## Usage
-
-```
-{{sparkLine
-    selector="example-sparkline"
-    data=example.data
-}}
 ```
 
 ### To run example locally
