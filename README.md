@@ -5,6 +5,7 @@ A reactive blaze component for rendering live jQuery Sparklines.
 
 jQuery Sparklines Official Documentation : http://omnipotent.net/jquery.sparkline/#s-docs
 
+## [ Live Example ](http://sparklines.meteor.com)
 ## [ Annotated Source ](http://austinrivas.github.io/meteor-sparklines/)
 
 ## Installing sparklines using Meteorite
@@ -22,18 +23,17 @@ $ mrt add sparklines
 }}
 ```
 
-## [ Live Example ](http://sparklines.meteor.com)
-
 ### To run example locally
 ``` sh
 $ git clone git://github.com/austinrivas/meteor-sparklines.git
 $ cd meteor-sparklines/example
 $ mrt add sparklines
+$ mrt add luma-ui
 $ meteor
 ```
 
 ### Tests
 ``` sh
 $ cd meteor-sparklines/example
-$ mrt test-packages ./
+$ mrt test-packages sparklines
 ```
