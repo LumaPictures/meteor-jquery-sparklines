@@ -1,43 +1,39 @@
-meteor-sparklines
+Sparklines [![Build Status](https://travis-ci.org/austinrivas/meteor-sparklines.svg)](https://travis-ci.org/austinrivas/meteor-sparklines)
 =================
 
-This jQuery plugin generates sparkliness (small inline charts) directly in the browser using data supplied either inline in the HTML, or via javascript.
-
-Requires Meteorite : https://github.com/oortcloud/meteorite
+A reactive blaze component for rendering live jQuery Sparklines.
 
 jQuery Sparklines Official Documentation : http://omnipotent.net/jquery.sparkline/#s-docs
 
+## [ Annotated Source ](http://austinrivas.github.io/meteor-sparklines/)
+
 ## Installing sparklines using Meteorite
 
-``` sh
-$ cd app/directory
+```
 $ mrt add sparklines
 ```
 
-## Meteor Packages
-* jQuery ( included )
-
 ## Usage
 
-See jQuery Sparklines Official Documentation : https://github.com/tracelytics/sparklines/blob/master/README.md
+```
+{{sparkLine
+    selector="example-sparkline"
+    data=example.data
+}}
+```
 
-## Example
-
-### <a href="http://meteor-sparklines-example.meteor.com">meteor-sparklines live example</a>
+## [ Live Example ](http://meteor-sparklines.meteor.com)
 
 ### To run example locally
 ``` sh
 $ git clone git://github.com/austinrivas/meteor-sparklines.git
 $ cd meteor-sparklines/example
-$ mrt
+$ mrt add sparklines
+$ meteor
 ```
 
 ### Tests
 ``` sh
-$ git clone git://github.com/austinrivas/meteor-sparklines.git
-$ cd meteor-sparklines
+$ cd meteor-sparklines/example
 $ mrt test-packages ./
 ```
-
-### TODOS
-* add real tests

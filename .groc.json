@@ -1,0 +1,21 @@
+{
+  "glob": [
+    "*.md",
+    "*.js",
+    "*.json",
+    "*.coffee",
+    "lib/**/*.coffee",
+    "example/*.coffee",
+    "example/lib/*.coffee",
+    "tests/**/*.coffee"
+  ],
+  "except": [
+    "*.build",
+    "*.idea",
+    "*vendor",
+    ".groc.json",
+    "example/packages/**",
+    "example/.meteor/**"
+  ],
+  "github": true
+}

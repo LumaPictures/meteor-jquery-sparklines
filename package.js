@@ -1,13 +1,34 @@
 Package.describe({
-    summary: "This jQuery plugin generates sparkliness (small inline charts) directly in the browser using data supplied either inline in the HTML, or via javascript"
+    summary: "A reactive blaze component for rendering live jQuery Sparklines."
 });
 
 Package.on_use(function (api) {
-    api.use('jquery', 'client');
-    api.add_files(['lib/jquery.sparklines.js'], 'client');
+  api.use([
+    'coffeescript'
+  ],['client', 'server']);
+
+  // for helpers
+  api.use([
+    'jquery',
+    'ui',
+    'templating',
+    'spacebars'
+  ], 'client');
+
+  api.add_files([
+    'vendor/jquery.sparklines.js'
+  ], [ 'client' ]);
 });
 
 Package.on_test(function (api) {
-    api.use(['sparklines', 'tinytest', 'test-helpers'], ['client', 'server']);
-    api.add_files('/tests/_tests.js', ['client', 'server']);
+  api.use([
+    'coffeescript',
+    'sparklines',
+    'tinytest',
+    'test-helpers'
+  ], ['client', 'server']);
+
+  api.add_files([
+    'tests/sparklines.tests.coffee'
+  ], ['client', 'server']);
 });

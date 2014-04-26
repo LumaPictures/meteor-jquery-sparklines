@@ -1,16 +1,8 @@
 {
-  "meteor": {
-    "git": "https://github.com/meteor/meteor.git",
-    "branch": "master"
-  },
   "packages": {
-    "sparklines": {},
-    "githubReadme": {},
-    "proxino": {},
-    "pageguide": {},
-    "bootboxjs": {},
-    "packages-bootstrap": {
-        "path": "packages/packages-bootstrap"
-    }
+    "sparklines": {
+      "path": ".."
+    },
+    "luma-ui": {}
   }
 }
