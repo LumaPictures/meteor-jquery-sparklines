@@ -22,7 +22,7 @@ $ mrt add sparklines
 }}
 ```
 
-## [ Live Example ](http://meteor-sparklines.meteor.com)
+## [ Live Example ](http://sparklines.meteor.com)
 
 ### To run example locally
 ``` sh
