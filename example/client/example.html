@@ -3,52 +3,70 @@
 </head>
 
 <template name="home">
-  {{> headerWidget }}
-  {{> infoBlocks }}
+  {{> pageHeaderWithSparklines }}
   {{> stringDataSource }}
+  {{> infoBlocks }}
+</template>
+
+<template name="pageHeaderWithSparklines">
+  {{#pageHeader}}
+  {{> pageTitle title="Sparklines" subtitle="Live bar charts." }}
+    {{#pageHeaderWidget selector="header-bar-stats" }}
+      {{#stats}}
+        {{#statsShowcase title="New Visits" currentValue="22.504"}}
+          {{> sparkline
+              selector="header-new-visits"
+              styles="bar-info chart"
+              dataSeries=sparklines.arrayDataSeriesExample
+          }}
+        {{/statsShowcase}}
+        {{#statsShowcase title="My Balance" currentValue="$16.29"}}
+          {{> sparkline
+              selector="header-my-balance"
+              styles="bar-danger chart"
+              dataSeries=sparklines.arrayDataSeriesExample
+          }}
+        {{/statsShowcase}}
+      {{/stats}}
+    {{/pageHeaderWidget}}
+  {{/pageHeader}}
+  {{> breadcrumbsLine }}
 </template>
 
 <template name="stringDataSource">
   <div class="panel panel-default">
     <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> String DataSource</h6></div>
     <div class="panel-body">
-      <ul class="page-stats list-justified">
-        <li class="bg-primary">
-          <div class="page-stats-showcase">
-            <span>New visits</span>
-            <h2>22.504</h2>
-          </div>
-          <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-        <li class="bg-danger">
-          <div class="page-stats-showcase">
-            <span>My balance</span>
-            <h2>$16.290</h2>
-          </div>
-          <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-        <li class="bg-success">
-          <div class="page-stats-showcase">
-            <span>New visits</span>
-            <h2>22.504</h2>
-          </div>
-          <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-        <li class="bg-info">
-          <div class="page-stats-showcase">
-            <span>My balance</span>
-            <h2>$16.290</h2>
-          </div>
-          <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-        <li class="bg-warning">
-          <div class="page-stats-showcase">
-            <span>My balance</span>
-            <h2>$16.290</h2>
-          </div>
-          <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-      </ul>
+      {{#stats styles="list-justified" }}
+        {{#statsShowcase title="New Visits" currentValue="22.504"}}
+          {{> sparkline
+              selector="string-new-visits"
+              styles="bar-info chart"
+              dataSeries="10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20"
+          }}
+        {{/statsShowcase}}
+        {{#statsShowcase title="My Balance" currentValue="$16.29"}}
+          {{> sparkline
+              selector="string-my-balance"
+              styles="bar-danger"
+              dataSeries="10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20"
+          }}
+        {{/statsShowcase}}
+        {{#statsShowcase title="New Visits" currentValue="22.504"}}
+          {{> sparkline
+              selector="string-new-visits-2"
+              styles="bar-info chart"
+              dataSeries="10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20"
+          }}
+        {{/statsShowcase}}
+        {{#statsShowcase title="My Balance" currentValue="$16.29"}}
+          {{> sparkline
+              selector="string-my-balance-2"
+              styles="bar-danger chart"
+              dataSeries="10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20"
+          }}
+        {{/statsShowcase}}
+      {{/stats}}
 
       <ul class="page-stats list-justified block">
         <li class="bg-default">
@@ -168,39 +186,4 @@
       <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
     </li>
   </ul>
-</template>
-
-<template name="headerWidget">
-  {{#pageHeader}}
-    {{> pageTitle title="Sparklines Header Widget" subtitle="See headerWidget Template for example" }}
-
-    <div class="visible-xs header-element-toggle">
-      <a class="btn btn-primary btn-icon" data-toggle="collapse" data-target="#header-bar-stats"><i class="icon-stats2"></i></a>
-    </div>
-
-    <div class="header-bar-stats">
-      <div class="collapse" id="header-bar-stats">
-        <div class="well">
-          <ul class="page-stats">
-            <li>
-              <div class="page-stats-showcase">
-                <span>New visits</span>
-                <h2>22.504</h2>
-              </div>
-              <div class="bar-info chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-            </li>
-            <li>
-              <div class="page-stats-showcase">
-                <span>My balance</span>
-                <h2>$16.290</h2>
-              </div>
-              <div class="bar-danger chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  {{/pageHeader}}
-
-  {{> breadcrumbsLine }}
 </template>

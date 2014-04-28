@@ -16,7 +16,9 @@ Package.on_use(function (api) {
   ], 'client');
 
   api.add_files([
-    'vendor/jquery.sparklines.js'
+    'vendor/jquery.sparklines.js',
+    'lib/sparklines.html',
+    'lib/sparklines.coffee'
   ], [ 'client' ]);
 });
 

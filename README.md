@@ -1,10 +1,9 @@
 Sparklines [![Build Status](https://travis-ci.org/austinrivas/meteor-sparklines.svg)](https://travis-ci.org/austinrivas/meteor-sparklines)
-=================
+==========
 
 A reactive blaze component for rendering live jQuery Sparklines.
 
-jQuery Sparklines Official Documentation : http://omnipotent.net/jquery.sparkline/#s-docs
-
+## [ jQuery Sparklines Official Documentation ](http://omnipotent.net/jquery.sparkline/#s-docs)
 ## [ Live Example ](http://sparklines.meteor.com)
 ## [ Annotated Source ](http://austinrivas.github.io/meteor-sparklines/)
 

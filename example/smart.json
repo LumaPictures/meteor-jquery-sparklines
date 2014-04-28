@@ -3,6 +3,8 @@
     "sparklines": {
       "path": ".."
     },
-    "luma-ui": {}
+    "luma-ui": {
+      "path": "../../meteor-luma-ui"
+    }
   }
 }
