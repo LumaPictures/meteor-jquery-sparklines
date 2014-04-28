@@ -1,7 +1,7 @@
 Router.addRoutes [{
   route: 'home'
   path: '/'
-  controller: 'PackageLayoutController'
+  controller: 'ExampleController'
   page:
     title: "Sparklines"
     subtitle: "A reactive blaze component for rendering live jQuery Sparklines."
