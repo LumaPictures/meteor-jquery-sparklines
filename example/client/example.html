@@ -40,71 +40,57 @@
       {{#stats styles="list-justified" }}
         {{#statsShowcase title="New Visits" currentValue="22.504"}}
           {{> sparkline
-              selector="string-new-visits"
               styles="bar-info chart"
-              dataSeries="10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20"
+              dataSeries=sparklines.stringDataSeriesExample
+              debug="all"
           }}
         {{/statsShowcase}}
         {{#statsShowcase title="My Balance" currentValue="$16.29"}}
           {{> sparkline
-              selector="string-my-balance"
               styles="bar-danger"
-              dataSeries="10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20"
+              dataSeries=sparklines.stringDataSeriesExample
           }}
         {{/statsShowcase}}
         {{#statsShowcase title="New Visits" currentValue="22.504"}}
           {{> sparkline
-              selector="string-new-visits-2"
               styles="bar-info chart"
-              dataSeries="10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20"
+              dataSeries=sparklines.stringDataSeriesExample
           }}
         {{/statsShowcase}}
         {{#statsShowcase title="My Balance" currentValue="$16.29"}}
           {{> sparkline
-              selector="string-my-balance-2"
               styles="bar-danger chart"
-              dataSeries="10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20"
+              dataSeries=sparklines.stringDataSeriesExample
           }}
         {{/statsShowcase}}
       {{/stats}}
 
-      <ul class="page-stats list-justified block">
-        <li class="bg-default">
-          <div class="page-stats-showcase">
-            <span>New visits</span>
-            <h2>22.504</h2>
-          </div>
-          <div class="bar-warning chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-        <li class="bg-default">
-          <div class="page-stats-showcase">
-            <span>My balance</span>
-            <h2>$16.290</h2>
-          </div>
-          <div class="bar-primary chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-        <li class="bg-default">
-          <div class="page-stats-showcase">
-            <span>New visits</span>
-            <h2>22.504</h2>
-          </div>
-          <div class="bar-info chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-        <li class="bg-default">
-          <div class="page-stats-showcase">
-            <span>My balance</span>
-            <h2>$16.290</h2>
-          </div>
-          <div class="bar-danger chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-        <li class="bg-default">
-          <div class="page-stats-showcase">
-            <span>My balance</span>
-            <h2>$16.290</h2>
-          </div>
-          <div class="bar-success chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
-        </li>
-      </ul>
+      {{#stats styles="list-justified block" }}
+        {{#statsShowcase title="New Visits" currentValue="22.504"}}
+          {{> sparkline
+              styles="bar-info chart"
+              dataSeries=sparklines.stringDataSeriesExample
+          }}
+        {{/statsShowcase}}
+        {{#statsShowcase title="My Balance" currentValue="$16.29"}}
+          {{> sparkline
+              styles="bar-danger"
+              dataSeries=sparklines.stringDataSeriesExample
+          }}
+        {{/statsShowcase}}
+        {{#statsShowcase title="New Visits" currentValue="22.504"}}
+          {{> sparkline
+              styles="bar-info chart"
+              dataSeries=sparklines.stringDataSeriesExample
+          }}
+        {{/statsShowcase}}
+        {{#statsShowcase title="My Balance" currentValue="$16.29"}}
+          {{> sparkline
+              styles="bar-danger chart"
+              dataSeries=sparklines.stringDataSeriesExample
+          }}
+        {{/statsShowcase}}
+      {{/stats}}
     </div>
   </div>
 </template>

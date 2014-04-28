@@ -3,13 +3,24 @@
 
 # ## Initialization
 
+# ##### created()
+Template.sparkline.created = ->
+  templateInstance = @
+  instantiatedComponent = templateInstance.__component__
+  instantiatedComponent.prepareSelector()
+  instantiatedComponent.prepareStyles()
+  instantiatedComponent.prepareOptions()
+  instantiatedComponent.prepareLoadingMessage()
+  instantiatedComponent.prepareDataSeries()
+  instantiatedComponent.log "created", @
+
 # ##### rendered()
 # When the component is first rendered datatables is initialized `templateInstance.__component__` is the this context
 Template.sparkline.rendered = ->
   templateInstance = @
   instantiatedComponent = templateInstance.__component__
-  instantiatedComponent.log "rendered", @
   instantiatedComponent.initialize()
+  instantiatedComponent.log "rendered", @
 
 # ##### destroyed()
 # Currently nothing is done when the component is destroyed.
@@ -17,11 +28,7 @@ Template.sparkline.destroyed = ->
   @log "destroyed"
 
 Template.sparkline.initialize = ->
-  @prepareSelector()
-  @prepareStyles()
-  @prepareOptions()
-  @prepareDataSeries()
-
+  @log 'selector', @getSelector()
   #===== Sparkline charts =====//
   $( ".#{ @getSelector() }" ).sparkline @getDataSeries(), @getOptions()
 
@@ -34,6 +41,14 @@ Template.sparkline.initialize = ->
     $.sparkline_display_visible()
 
   @log "initialized", @
+
+Template.sparkline.prepareLoadingMessage = ->
+  @setData 'loadingMessage', @getLoadingMessage()
+
+Template.sparkline.getLoadingMessage = ->
+  if @getData().loadingMessage
+    return @getData().loadingMessage
+  else return @getOptions().loadingMessage or false
 
 # #### `selector` String ( required )
 # The table selector for the dataTable instance you are creating, must be unique in the page scope or you will get
@@ -48,8 +63,11 @@ Template.sparkline.getSelector = ->
 
 # ##### prepareSelector()
 Template.sparkline.prepareSelector = ->
-  unless @getSelector()
-    @setSelector "sparkline-#{ @getGuid() }"
+  selector = @getSelector()
+  unless selector
+    selector = "sparkline-#{ @getGuid() }"
+  @setSelector selector
+
 
 # #### `dataSeries` String or Array ( optional )
 # The initial dataSeries passed in via the component declaration
@@ -63,7 +81,7 @@ Template.sparkline.getDataSeries = ->
 
 # ##### prepareSelector()
 Template.sparkline.prepareDataSeries = ->
-  if @getDataSeries() is String
+  if _.isString @getDataSeries()
     @setDataSeries @getDataSeries().split ","
 
 # #### `styles` String ( optional )
