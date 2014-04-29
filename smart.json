@@ -1,9 +1,9 @@
 {
-    "name": "sparklines",
-    "description": "jQuery Sparklines Reactive Blaze Component",
-    "homepage": "https://github.com/austinrivas/meteor-sparklines",
-    "author": "Austin Rivas  (https://github.com/austinrivas)",
-    "version": "2.0.0",
-    "git": "https://github.com/austinrivas/meteor-sparklines.git",
-    "packages" : {}
+  "name": "sparklines",
+  "description": "A reactive blaze component for rendering live jQuery Sparklines.",
+  "homepage": "https://github.com/austinrivas/meteor-sparklines",
+  "author": "Austin Rivas <austinrivas@gmail.com> (http://github.com/austinrivas)",
+  "version": "2.0.0",
+  "git": "https://github.com/austinrivas/meteor-sparklines.git",
+  "packages": {}
 }
