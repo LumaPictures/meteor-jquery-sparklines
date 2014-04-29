@@ -74,16 +74,38 @@ Template.sparkline.setDataSeries = ( dataSeries ) ->
   Match.test dataSeries, Array
   @setData 'dataSeries', dataSeries
 
-# ##### getSelector()
+# ##### getDataSeries()
 Template.sparkline.getDataSeries = ->
-  if @isDomSource()
-    return 'html'
-  else return @getData().dataSeries or false
+  return @getData().dataSeries or false
 
-# ##### prepareSelector()
+# ##### getProperty()
+Template.sparkline.getProperty = ->
+  return @getData().property or false
+
+Template.sparkline.getArray = ->
+  return @getData().array or false
+
+Template.sparkline.getCSV = ->
+  return @getData().csv or false
+
+Template.sparkline.getCursor = ->
+  return @getData().cursor or false
+
+# ##### prepareDataSeries()
 Template.sparkline.prepareDataSeries = ->
-  if _.isString @getDataSeries()
-    @setDataSeries @getDataSeries().split ","
+  if @getCSV()
+    @setDataSeries @getCSV().split ","
+  else if @getArray()
+    @setDataSeries @getArray()
+  else if @getProperty() and @getCursor()
+    array = []
+    @getCursor().forEach ( document ) =>
+      unless _.has document, @getProperty()
+        @error "Document lacks property #{ @getProperty() }", document
+      array.push document[ @getProperty() ]
+    @setDataSeries array
+  else if @isDomSource()
+    @setDataSeries 'html'
 
 # #### `styles` String ( optional )
 # A string of the css classes to be applied to this sparkline.

@@ -24,7 +24,7 @@
       <div class="panel-body">
         {{> sparkline
             type="bar"
-            dataSeries=sparklines.csvDataSeriesExample
+            csv=sparklines.csvDataSeriesExample
         }}
       </div>
     </div>
@@ -36,10 +36,8 @@
     <div class="panel panel-default">
       <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> DOM DataSource</h6></div>
       <div class="panel-body">
-        {{# sparkline type="bar" domSource="true" debug="all" }}
-          {{#each sparklines.arrayDataSeriesExample }}
-            {{this}},
-          {{/each}}
+        {{# sparkline type="bar" domSource="true" }}
+          {{sparklines.csvDataSeriesExample}}
         {{/sparkline}}
       </div>
     </div>
@@ -53,7 +51,7 @@
       <div class="panel-body">
         {{> sparkline
             type="bar"
-            dataSeries=sparklines.arrayDataSeriesExample
+            array=sparklines.arrayDataSeriesExample
         }}
       </div>
     </div>
@@ -67,7 +65,9 @@
       <div class="panel-body">
         {{> sparkline
             type="bar"
-            dataSeries=sparklines.cursorDataSeriesExample
+            cursor=sparklines.cursorDataSeriesExample
+            property="value"
+            debug="all"
         }}
       </div>
     </div>
@@ -81,7 +81,7 @@
       <div class="panel-body">
         {{> sparkline
             styles="bar-default"
-            dataSeries=sparklines.csvDataSeriesExample
+            csv=sparklines.csvDataSeriesExample
         }}
       </div>
     </div>
@@ -95,7 +95,7 @@
       <div class="panel-body">
         {{> sparkline
             styles="bar-info"
-            dataSeries=sparklines.csvDataSeriesExample
+            csv=sparklines.csvDataSeriesExample
         }}
       </div>
     </div>
@@ -109,7 +109,7 @@
       <div class="panel-body">
         {{> sparkline
             styles="bar-warning"
-            dataSeries=sparklines.csvDataSeriesExample
+            csv=sparklines.csvDataSeriesExample
         }}
       </div>
     </div>
@@ -123,7 +123,7 @@
       <div class="panel-body">
         {{> sparkline
             styles="bar-primary"
-            dataSeries=sparklines.csvDataSeriesExample
+            csv=sparklines.csvDataSeriesExample
         }}
       </div>
     </div>
@@ -137,7 +137,7 @@
       <div class="panel-body">
         {{> sparkline
             styles="bar-success"
-            dataSeries=sparklines.csvDataSeriesExample
+            csv=sparklines.csvDataSeriesExample
         }}
       </div>
     </div>
@@ -151,7 +151,7 @@
       <div class="panel-body">
         {{> sparkline
             styles="bar-danger"
-            dataSeries=sparklines.csvDataSeriesExample
+            csv=sparklines.csvDataSeriesExample
         }}
       </div>
     </div>
