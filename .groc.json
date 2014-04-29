@@ -11,6 +11,7 @@
     "*.build",
     "*.idea",
     "*vendor",
+    "router.coffee",
     ".groc.json",
     "example/packages/**",
     "example/.meteor/**"
