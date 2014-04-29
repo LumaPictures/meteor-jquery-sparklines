@@ -11,14 +11,14 @@
           {{> sparkline
               selector="header-new-visits"
               styles="bar-info chart"
-              dataSeries=sparklines.arrayDataSeriesExample
+              array=sparklines.arrayDataSeriesExample
           }}
         {{/statsShowcase}}
         {{#statsShowcase title="My Balance" currentValue="$16.29"}}
           {{> sparkline
               selector="header-my-balance"
               styles="bar-danger chart"
-              dataSeries=sparklines.arrayDataSeriesExample
+              array=sparklines.arrayDataSeriesExample
           }}
         {{/statsShowcase}}
       {{/stats}}

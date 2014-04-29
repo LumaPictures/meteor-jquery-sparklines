@@ -8,13 +8,27 @@ A reactive blaze component for rendering live jQuery Sparklines.
 ## [ Annotated Source ](http://austinrivas.github.io/meteor-sparklines/)
 
 ## Usage
-```
-{{> sparkline
-    selector=example.selector
-    data=example.data
-    options=example.options
-}}
-```
+
+By default sparkline will create a line graph with a selector of `sparkline-{guid}`
+
+There are four data sources that you can draw from.
+
+    * CSV Datasource : `{{> sparkline csv="1,2,3,4" }}`
+    * Array Datasource : `{{> sparkline array=someArray }}`
+    * DOM Datasource : `{{#sparkline domSource="true" }} {{ someCSVData }} {{/sparkline}}
+    * Cursor Datasource : `{{> sparkline cursor=someCursor property="value" }}`
+
+You can specify any of the types allowed by the sparklines plugin
+
+    * Line : `{{> sparkline type="line" array=someArray }}`
+    * Bar : `{{> sparkline type="bar" array=someArray }}`
+    * Tristate: `{{> sparkline type="tristate" array=someArray }}`
+    * Discrete : `{{> sparkline type="discrete" array=someArray }}`
+    * Bullet : `{{> sparkline type="bullet" array=someArray }}`
+    * Pie : `{{> sparkline type="pie" array=someArray }}`
+    * Box Plots : `{{> sparkline type="box" array=someArray }}`
+
+
 
 ## Installing sparklines using Meteorite
 
