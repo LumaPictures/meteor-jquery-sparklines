@@ -4,164 +4,162 @@
 </template>
 
 <template name="barChartDataSources">
-  <div class="panel panel-default">
-    <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Bar Chart DataSources</h6></div>
-    <div class="panel-body">
-      <div class="row">
-        {{> csvBarChartDataSource }}
-        {{> domBarChartDataSource }}
-        {{> arrayBarChartDataSource }}
-        {{> cursorBarChartDataSource }}
-      </div>
-    </div>
-  </div>
+  {{#panel}}
+    {{> panelHeading icon="icon-table" title="Bar Chart DataSources" }}
+    {{#panelBody}}
+      {{> csvBarChartDataSource }}
+      {{> domBarChartDataSource }}
+      {{> arrayBarChartDataSource }}
+      {{> cursorBarChartDataSource }}
+    {{/panelBody}}
+  {{/panel}}
 </template>
 
 <template name="csvBarChartDataSource">
   <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> CSV DataSource</h6></div>
-      <div class="panel-body">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="CSV DataSource" }}
+      {{#panelBody}}
         {{> sparkline
             type="bar"
             csv=sparklines.csvDataSeriesExample
         }}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="domBarChartDataSource">
   <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> DOM DataSource</h6></div>
-      <div class="panel-body">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="DOM DataSource" }}
+      {{#panelBody}}
         {{# sparkline type="bar" domSource="true" }}
           {{sparklines.csvDataSeriesExample}}
         {{/sparkline}}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="arrayBarChartDataSource">
   <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Array DataSource</h6></div>
-      <div class="panel-body">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Array DataSource" }}
+      {{#panelBody}}
         {{> sparkline
             type="bar"
             array=sparklines.arrayDataSeriesExample
         }}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="cursorBarChartDataSource">
   <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Cursor DataSource</h6></div>
-      <div class="panel-body">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Cursor DataSource" }}
+      {{#panelBody}}
         {{> sparkline
             type="bar"
             cursor=sparklines.cursorDataSeriesExample
             property="value"
             debug="all"
         }}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="defaultBarChart">
   <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-default</h6></div>
-      <div class="panel-body">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="bar-default" }}
+      {{#panelBody}}
         {{> sparkline
             styles="bar-default"
             csv=sparklines.csvDataSeriesExample
         }}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="infoBarChart">
   <div class="col-md-4">
-    <div class="panel panel-info">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-info</h6></div>
-      <div class="panel-body">
+    {{#panel styles="panel-info" }}
+      {{> panelHeading icon="icon-table" title="bar-info" }}
+      {{#panelBody}}
         {{> sparkline
             styles="bar-info"
             csv=sparklines.csvDataSeriesExample
         }}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="warningBarChart">
   <div class="col-md-4">
-    <div class="panel panel-warning">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-warning</h6></div>
-      <div class="panel-body">
+    {{#panel styles="panel-warning" }}
+      {{> panelHeading icon="icon-table" title="bar-warning" }}
+      {{#panelBody}}
         {{> sparkline
             styles="bar-warning"
             csv=sparklines.csvDataSeriesExample
         }}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="primaryBarChart">
   <div class="col-md-4">
-    <div class="panel panel-primary">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-primary</h6></div>
-      <div class="panel-body">
+    {{#panel styles="panel-primary" }}
+      {{> panelHeading icon="icon-table" title="bar-primary" }}
+      {{#panelBody}}
         {{> sparkline
             styles="bar-primary"
             csv=sparklines.csvDataSeriesExample
         }}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="successBarChart">
   <div class="col-md-4">
-    <div class="panel panel-success">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-success</h6></div>
-      <div class="panel-body">
+    {{#panel styles="panel-success"}}
+      {{> panelHeading icon="icon-table" title="bar-success" }}
+      {{#panelBody}}
         {{> sparkline
             styles="bar-success"
             csv=sparklines.csvDataSeriesExample
         }}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="dangerBarChart">
   <div class="col-md-4">
-    <div class="panel panel-danger">
-      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-danger</h6></div>
-      <div class="panel-body">
+    {{#panel styles="panel-danger"}}
+      {{> panelHeading icon="icon-table" title="bar-danger" }}
+      {{#panelBody}}
         {{> sparkline
             styles="bar-danger"
             csv=sparklines.csvDataSeriesExample
         }}
-      </div>
-    </div>
+      {{/panelBody}}
+    {{/panel}}
   </div>
 </template>
 
 <template name="presetBarCharts">
-  <div class="panel panel-default">
-    <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Preset Bar Charts</h6></div>
-    <div class="panel-body">
+  {{#panel}}
+    {{> panelHeading icon="icon-table" title="Preset Bar Charts" }}
+    {{#panelBody}}
       <div class="row block">
         {{> defaultBarChart }}
         {{> infoBarChart }}
@@ -172,6 +170,6 @@
         {{> successBarChart }}
         {{> dangerBarChart }}
       </div>
-    </div>
-  </div>
+    {{/panelBody}}
+  {{/panel}}
 </template>
