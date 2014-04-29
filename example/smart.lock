@@ -5,16 +5,16 @@
       "sparklines": {
         "path": ".."
       },
-      "luma-ui": {
-        "path": "../../meteor-luma-ui"
-      }
+      "luma-ui": {}
     },
     "packages": {
       "sparklines": {
         "path": ".."
       },
       "luma-ui": {
-        "path": "../../meteor-luma-ui"
+        "git": "https://github.com/lumapictures/meteor-luma-ui.git",
+        "tag": "v0.1.9",
+        "commit": "27ce640dd9390946e5f1a520c8f61a6ca2352850"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
