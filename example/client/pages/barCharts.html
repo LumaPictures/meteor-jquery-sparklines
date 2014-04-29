@@ -36,9 +36,9 @@
     <div class="panel panel-default">
       <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> DOM DataSource</h6></div>
       <div class="panel-body">
-        {{# sparkline type="bar" }}
-          {{#each sparklines.arraDataSeriesExample }}
-            {{value}},
+        {{# sparkline type="bar" domSource="true" debug="all" }}
+          {{#each sparklines.arrayDataSeriesExample }}
+            {{this}},
           {{/each}}
         {{/sparkline}}
       </div>

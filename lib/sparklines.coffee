@@ -7,40 +7,37 @@
 Template.sparkline.created = ->
   templateInstance = @
   instantiatedComponent = templateInstance.__component__
+  instantiatedComponent.log "created", @
   instantiatedComponent.prepareSelector()
   instantiatedComponent.prepareStyles()
   instantiatedComponent.prepareOptions()
   instantiatedComponent.prepareType()
   instantiatedComponent.prepareLoadingMessage()
   instantiatedComponent.prepareDataSeries()
-  instantiatedComponent.log "created", @
 
 # ##### rendered()
 # When the component is first rendered datatables is initialized `templateInstance.__component__` is the this context
 Template.sparkline.rendered = ->
   templateInstance = @
   instantiatedComponent = templateInstance.__component__
-  instantiatedComponent.initialize()
   instantiatedComponent.log "rendered", @
+  instantiatedComponent.initialize()
 
 # ##### destroyed()
 # Currently nothing is done when the component is destroyed.
 Template.sparkline.destroyed = ->
   templateInstance = @
-  templateInstance.__component__.log "destroyed"
+  templateInstance.__component__.log "destroyed", @
 
 Template.sparkline.initialize = ->
-  @log 'selector', @getSelector()
   #===== Sparkline charts =====//
   $( ".#{ @getSelector() }" ).sparkline @getDataSeries(), @getOptions()
 
   # Activate hidden Sparkline on tab show
-  $("a[data-toggle=\"tab\"]").on "shown.bs.tab", ->
-    $.sparkline_display_visible()
+  $("a[data-toggle=\"tab\"]").on "shown.bs.tab", -> $.sparkline_display_visible()
 
   # Activate hidden Sparkline
-  $(".collapse").on "shown.bs.collapse", ->
-    $.sparkline_display_visible()
+  $(".collapse").on "shown.bs.collapse", -> $.sparkline_display_visible()
 
   @log "initialized", @
 
@@ -79,7 +76,9 @@ Template.sparkline.setDataSeries = ( dataSeries ) ->
 
 # ##### getSelector()
 Template.sparkline.getDataSeries = ->
-  return @getData().dataSeries or false
+  if @isDomSource()
+    return 'html'
+  else return @getData().dataSeries or false
 
 # ##### prepareSelector()
 Template.sparkline.prepareDataSeries = ->
@@ -178,6 +177,10 @@ Template.sparkline.getData = ->
 Template.sparkline.setData = ( key, data ) ->
   @templateInstance.data[ key ] = data
   @log "#{ key }:set", data
+
+# ##### isDomSource()
+Template.sparkline.isDomSource = ->
+  return @getData().domSource or false
 
 Template.sparkline.getPresetOptions = ( key ) ->
   if key

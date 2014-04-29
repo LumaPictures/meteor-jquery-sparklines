@@ -36,3 +36,6 @@ $ meteor
 $ cd meteor-sparklines/example
 $ mrt test-packages sparklines
 ```
+
+## TODO
+cover all example use cases found on official site http://omnipotent.net/jquery.sparkline/assets/index.js
