@@ -25,7 +25,8 @@ Template.sparkline.rendered = ->
 # ##### destroyed()
 # Currently nothing is done when the component is destroyed.
 Template.sparkline.destroyed = ->
-  @log "destroyed"
+  templateInstance = @
+  templateInstance.__component__.log "destroyed"
 
 Template.sparkline.initialize = ->
   @log 'selector', @getSelector()

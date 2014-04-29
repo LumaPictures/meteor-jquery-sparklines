@@ -1,0 +1,190 @@
+<template name="barCharts">
+  <div class="row">
+    {{> csvBarChartDataSource }}
+    {{> arrayBarChartDataSource }}
+    {{> reactiveBarChartCursorDataSource }}
+  </div>
+  <div class="row">
+    {{> presetBarCharts }}
+  </div>
+</template>
+
+<template name="csvBarChartDataSource">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> CSV DataSource</h6></div>
+      <div class="panel-body">
+        {{#stats styles="list-justified" }}
+          {{#statsShowcase title="New Visits" currentValue="22,504"}}
+            {{> sparkline
+                styles="bar-default chart"
+                dataSeries=sparklines.csvDataSeriesExample
+            }}
+          {{/statsShowcase}}
+        {{/stats}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="arrayBarChartDataSource">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Array DataSource</h6></div>
+      <div class="panel-body">
+        {{#stats styles="list-justified" }}
+          {{#statsShowcase title="New Visits" currentValue="22,504"}}
+            {{> sparkline
+                styles="bar-default chart"
+                dataSeries=sparklines.arrayDataSeriesExample
+            }}
+          {{/statsShowcase}}
+        {{/stats}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="reactiveBarChartCursorDataSource">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Reactive Cursor DataSource</h6></div>
+      <div class="panel-body">
+        {{#stats styles="list-justified" }}
+          {{#statsShowcase title="New Visits" currentValue="22,504"}}
+            {{> sparkline
+                styles="bar-default chart"
+                dataSeries=sparklines.cursorDataSeriesExample
+            }}
+          {{/statsShowcase}}
+        {{/stats}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="defaultBarChart">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-default</h6></div>
+      <div class="panel-body">
+        {{#stats styles="list-justified" }}
+          {{#statsShowcase title="New Visits" currentValue="22,504"}}
+            {{> sparkline
+                styles="bar-default chart"
+                dataSeries=sparklines.csvDataSeriesExample
+            }}
+          {{/statsShowcase}}
+        {{/stats}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="infoBarChart">
+  <div class="col-md-4">
+    <div class="panel panel-info">
+      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-info</h6></div>
+      <div class="panel-body">
+        {{#stats styles="list-justified" }}
+          {{#statsShowcase title="New Visits" currentValue="22,504"}}
+            {{> sparkline
+                styles="bar-info chart"
+                dataSeries=sparklines.csvDataSeriesExample
+            }}
+          {{/statsShowcase}}
+        {{/stats}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="warningBarChart">
+  <div class="col-md-4">
+    <div class="panel panel-warning">
+      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-warning</h6></div>
+      <div class="panel-body">
+        {{#stats styles="list-justified" }}
+          {{#statsShowcase title="New Visits" currentValue="22,504"}}
+            {{> sparkline
+                styles="bar-warning chart"
+                dataSeries=sparklines.csvDataSeriesExample
+            }}
+          {{/statsShowcase}}
+        {{/stats}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="primaryBarChart">
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-primary</h6></div>
+      <div class="panel-body">
+        {{#stats styles="list-justified" }}
+          {{#statsShowcase title="New Visits" currentValue="22,504"}}
+            {{> sparkline
+                styles="bar-primary chart"
+                dataSeries=sparklines.csvDataSeriesExample
+            }}
+          {{/statsShowcase}}
+        {{/stats}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="successBarChart">
+  <div class="col-md-4">
+    <div class="panel panel-success">
+      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-success</h6></div>
+      <div class="panel-body">
+        {{#stats styles="list-justified" }}
+          {{#statsShowcase title="New Visits" currentValue="22,504"}}
+            {{> sparkline
+                styles="bar-success chart"
+                dataSeries=sparklines.csvDataSeriesExample
+            }}
+          {{/statsShowcase}}
+        {{/stats}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="dangerBarChart">
+  <div class="col-md-4">
+    <div class="panel panel-danger">
+      <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> bar-danger</h6></div>
+      <div class="panel-body">
+        {{#stats styles="list-justified" }}
+          {{#statsShowcase title="New Visits" currentValue="22,504"}}
+            {{> sparkline
+              styles="bar-danger chart"
+              dataSeries=sparklines.csvDataSeriesExample
+            }}
+          {{/statsShowcase}}
+        {{/stats}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="presetBarCharts">
+  <div class="panel panel-default">
+    <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Preset Bar Charts</h6></div>
+    <div class="panel-body">
+      <div class="row block">
+        {{> defaultBarChart }}
+        {{> infoBarChart }}
+        {{> warningBarChart }}
+      </div>
+      <div class="row">
+        {{> primaryBarChart }}
+        {{> successBarChart }}
+        {{> dangerBarChart }}
+      </div>
+    </div>
+  </div>
+</template>

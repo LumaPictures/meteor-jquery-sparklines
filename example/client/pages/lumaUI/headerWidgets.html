@@ -1,0 +1,28 @@
+<template name="headerWidgets">
+  {{> pageHeaderWithSparklinesBarChart }}
+</template>
+
+<template name="pageHeaderWithSparklinesBarChart">
+  {{#pageHeader}}
+    {{> pageTitle title="Bar Charts" subtitle="Bar chart header widgets." }}
+    {{#pageHeaderWidget selector="header-bar-stats" }}
+      {{#stats}}
+        {{#statsShowcase title="New Visits" currentValue="22.504"}}
+          {{> sparkline
+              selector="header-new-visits"
+              styles="bar-info chart"
+              dataSeries=sparklines.arrayDataSeriesExample
+          }}
+        {{/statsShowcase}}
+        {{#statsShowcase title="My Balance" currentValue="$16.29"}}
+          {{> sparkline
+              selector="header-my-balance"
+              styles="bar-danger chart"
+              dataSeries=sparklines.arrayDataSeriesExample
+          }}
+        {{/statsShowcase}}
+      {{/stats}}
+    {{/pageHeaderWidget}}
+  {{/pageHeader}}
+  {{> breadcrumbsLine }}
+</template>

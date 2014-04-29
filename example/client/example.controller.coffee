@@ -1,8 +1,9 @@
 class @ExampleController extends PackageLayoutController
   data: ->
     @data.sparklines =
-      stringDataSeriesExample: "10,14,8,45,23,41,22,31,19,12,28,21,24,20"
+      csvDataSeriesExample: "10,14,8,45,23,41,22,31,19,12,28,21,24,20"
       arrayDataSeriesExample: ["10", "14", "8", "45", "23", "41", "22", "31", "19", "12", "28", "21", "24", "20"]
+      cursorDataSeriesExample: ExampleData.find()
 
     @data.package =
       name: "Sparklines"
