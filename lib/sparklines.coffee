@@ -10,6 +10,7 @@ Template.sparkline.created = ->
   instantiatedComponent.prepareSelector()
   instantiatedComponent.prepareStyles()
   instantiatedComponent.prepareOptions()
+  instantiatedComponent.prepareType()
   instantiatedComponent.prepareLoadingMessage()
   instantiatedComponent.prepareDataSeries()
   instantiatedComponent.log "created", @
@@ -119,6 +120,24 @@ Template.sparkline.getOptions = ->
 Template.sparkline.prepareOptions = ->
   options = @getOptions() or {}
   @setOptions _.defaults( options, @defaultOptions )
+
+# #### `type` String ( optional )
+# ##### setType()
+Template.sparkline.setType = ( type ) ->
+  Match.test type, String
+  @setData 'type', type
+
+# ##### getType()
+Template.sparkline.getType = ->
+  return @getData().type or false
+
+# ##### prepareType()
+# Prepares the sparklines options object by merging the options passed in with the defaults and presets.
+Template.sparkline.prepareType = ->
+  if @getType()
+    options = @getOptions()
+    options.type = @getType()
+    @setOptions options
 
 # #### `debug` String ( optional )
 # A handy option for granular debug logs.
