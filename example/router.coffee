@@ -6,6 +6,16 @@ Router.addRoutes [{
     title: "Sparklines"
     subtitle: "A reactive blaze component for rendering live jQuery Sparklines."
 },{
+  route: 'lineCharts'
+  path: '/line-charts'
+  controller: 'ExampleController'
+  page:
+    title: "Line Charts"
+    subtitle: "Sometimes basic is best."
+  nav:
+    priority: 1
+    icon: "icon-stats"
+},{
   route: 'barCharts'
   path: '/bar-charts'
   controller: 'ExampleController'
@@ -13,8 +23,58 @@ Router.addRoutes [{
     title: "Bar Charts"
     subtitle: "DOM, String, Array, or Reactive Cursor datasource."
   nav:
-    priority: 1
+    priority: 2
     icon: "icon-stats2"
+},{
+  route: 'tristateCharts'
+  path: '/tristate-charts'
+  controller: 'ExampleController'
+  page:
+    title: "Tristate Charts"
+    subtitle: "DOM, String, Array, or Reactive Cursor datasource."
+  nav:
+    priority: 3
+    icon: "icon-stats-down"
+},{
+  route: 'discreteCharts'
+  path: '/discrete-charts'
+  controller: 'ExampleController'
+  page:
+    title: "Discrete Charts"
+    subtitle: "DOM, String, Array, or Reactive Cursor datasource."
+  nav:
+    priority: 4
+    icon: "icon-stats-down"
+},{
+  route: 'bulletCharts'
+  path: '/bullet-charts'
+  controller: 'ExampleController'
+  page:
+    title: "Bullet Charts"
+    subtitle: "DOM, String, Array, or Reactive Cursor datasource."
+  nav:
+    priority: 5
+    icon: "icon-stats-down"
+},{
+  route: 'pieCharts'
+  path: '/pie-charts'
+  controller: 'ExampleController'
+  page:
+    title: "Pie Charts"
+    subtitle: "DOM, String, Array, or Reactive Cursor datasource."
+  nav:
+    priority: 6
+    icon: "icon-stats-down"
+},{
+  route: 'boxCharts'
+  path: '/box-charts'
+  controller: 'ExampleController'
+  page:
+    title: "Box Charts"
+    subtitle: "DOM, String, Array, or Reactive Cursor datasource."
+  nav:
+    priority: 7
+    icon: "icon-stats-down"
 },{
   route: 'lumaUI'
   path: '/luma-ui'
@@ -23,7 +83,7 @@ Router.addRoutes [{
     title: "Luma UI"
     subtitle: "Luma UI takes care of everything for you."
   nav:
-    priority: 2
+    priority: 999
     icon: "icon-moon"
     children: [
       {

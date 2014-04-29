@@ -1,0 +1,174 @@
+<template name="pieCharts">
+  {{> pieChartDataSources }}
+  {{> presetPieCharts }}
+</template>
+
+<template name="pieChartDataSources">
+  {{#panel}}
+    {{> panelHeading icon="icon-table" title="Pie Chart DataSources" }}
+    {{#panelBody}}
+      {{> csvPieChartDataSource }}
+      {{> domPieChartDataSource }}
+      {{> arrayPieChartDataSource }}
+      {{> cursorPieChartDataSource }}
+    {{/panelBody}}
+  {{/panel}}
+</template>
+
+<template name="csvPieChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="CSV DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="pie"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="domPieChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="DOM DataSource" }}
+      {{#panelBody}}
+        {{#sparkline type="pie" domSource="true" }}
+          {{sparklines.csvDataSeriesExample}}
+        {{/sparkline}}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="arrayPieChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Array DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="pie"
+            array=sparklines.arrayDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="cursorPieChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Cursor DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="pie"
+            cursor=sparklines.cursorDataSeriesExample
+            property="value"
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="defaultPieChart">
+  <div class="col-md-4">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="pie-default" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="pie-default"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="infoPieChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-info" }}
+      {{> panelHeading icon="icon-table" title="pie-info" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="pie-info"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="warningPieChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-warning" }}
+      {{> panelHeading icon="icon-table" title="pie-warning" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="pie-warning"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="primaryPieChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-primary" }}
+      {{> panelHeading icon="icon-table" title="pie-primary" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="pie-primary"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="successPieChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-success"}}
+        {{> panelHeading icon="icon-table" title="pie-success" }}
+        {{#panelBody}}
+        {{> sparkline
+            styles="pie-success"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="dangerPieChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-danger"}}
+      {{> panelHeading icon="icon-table" title="pie-danger" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="pie-danger"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="presetPieCharts">
+  {{#panel}}
+  {{> panelHeading icon="icon-table" title="Preset Pie Charts" }}
+  {{#panelBody}}
+  <div class="row block">
+    {{> defaultPieChart }}
+    {{> infoPieChart }}
+    {{> warningPieChart }}
+  </div>
+  <div class="row">
+    {{> primaryPieChart }}
+    {{> successPieChart }}
+    {{> dangerPieChart }}
+  </div>
+  {{/panelBody}}
+  {{/panel}}
+</template>

@@ -1,0 +1,174 @@
+<template name="boxCharts">
+  {{> boxChartDataSources }}
+  {{> presetBoxCharts }}
+</template>
+
+<template name="boxChartDataSources">
+  {{#panel}}
+    {{> panelHeading icon="icon-table" title="Box Chart DataSources" }}
+    {{#panelBody}}
+      {{> csvBoxChartDataSource }}
+      {{> domBoxChartDataSource }}
+      {{> arrayBoxChartDataSource }}
+      {{> cursorBoxChartDataSource }}
+    {{/panelBody}}
+  {{/panel}}
+</template>
+
+<template name="csvBoxChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="CSV DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="box"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="domBoxChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="DOM DataSource" }}
+      {{#panelBody}}
+        {{#sparkline type="box" domSource="true" }}
+          {{sparklines.csvDataSeriesExample}}
+        {{/sparkline}}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="arrayBoxChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Array DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="box"
+            array=sparklines.arrayDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="cursorBoxChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Cursor DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="box"
+            cursor=sparklines.cursorDataSeriesExample
+            property="value"
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="defaultBoxChart">
+  <div class="col-md-4">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="box-default" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="box-default"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="infoBoxChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-info" }}
+      {{> panelHeading icon="icon-table" title="box-info" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="box-info"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="warningBoxChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-warning" }}
+      {{> panelHeading icon="icon-table" title="box-warning" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="box-warning"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="primaryBoxChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-primary" }}
+      {{> panelHeading icon="icon-table" title="box-primary" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="box-primary"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="successBoxChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-success"}}
+      {{> panelHeading icon="icon-table" title="box-success" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="box-success"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="dangerBoxChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-danger"}}
+      {{> panelHeading icon="icon-table" title="box-danger" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="box-danger"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="presetBoxCharts">
+  {{#panel}}
+    {{> panelHeading icon="icon-table" title="Preset Box Charts" }}
+    {{#panelBody}}
+    <div class="row block">
+      {{> defaultBoxChart }}
+      {{> infoBoxChart }}
+      {{> warningBoxChart }}
+    </div>
+    <div class="row">
+      {{> primaryBoxChart }}
+      {{> successBoxChart }}
+      {{> dangerBoxChart }}
+    </div>
+    {{/panelBody}}
+  {{/panel}}
+</template>

@@ -1,0 +1,174 @@
+<template name="discreteCharts">
+  {{> discreteChartDataSources }}
+  {{> presetDiscreteCharts }}
+</template>
+
+<template name="discreteChartDataSources">
+  {{#panel}}
+    {{> panelHeading icon="icon-table" title="Discrete Chart DataSources" }}
+    {{#panelBody}}
+      {{> csvDiscreteChartDataSource }}
+      {{> domDiscreteChartDataSource }}
+      {{> arrayDiscreteChartDataSource }}
+      {{> cursorDiscreteChartDataSource }}
+    {{/panelBody}}
+  {{/panel}}
+</template>
+
+<template name="csvDiscreteChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="CSV DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="discrete"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="domDiscreteChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="DOM DataSource" }}
+      {{#panelBody}}
+        {{#sparkline type="discrete" domSource="true" }}
+          {{sparklines.csvDataSeriesExample}}
+        {{/sparkline}}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="arrayDiscreteChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Array DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="discrete"
+            array=sparklines.arrayDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="cursorDiscreteChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Cursor DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="discrete"
+            cursor=sparklines.cursorDataSeriesExample
+            property="value"
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="defaultDiscreteChart">
+  <div class="col-md-4">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="discrete-default" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="discrete-default"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="infoDiscreteChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-info" }}
+      {{> panelHeading icon="icon-table" title="discrete-info" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="discrete-info"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="warningDiscreteChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-warning" }}
+      {{> panelHeading icon="icon-table" title="discrete-warning" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="discrete-warning"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="primaryDiscreteChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-primary" }}
+      {{> panelHeading icon="icon-table" title="discrete-primary" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="discrete-primary"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="successDiscreteChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-success"}}
+      {{> panelHeading icon="icon-table" title="discrete-success" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="discrete-success"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="dangerDiscreteChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-danger"}}
+      {{> panelHeading icon="icon-table" title="discrete-danger" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="discrete-danger"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="presetDiscreteCharts">
+  {{#panel}}
+  {{> panelHeading icon="icon-table" title="Preset Discrete Charts" }}
+  {{#panelBody}}
+    <div class="row block">
+      {{> defaultDiscreteChart }}
+      {{> infoDiscreteChart }}
+      {{> warningDiscreteChart }}
+    </div>
+    <div class="row">
+      {{> primaryDiscreteChart }}
+      {{> successDiscreteChart }}
+      {{> dangerDiscreteChart }}
+    </div>
+  {{/panelBody}}
+  {{/panel}}
+</template>

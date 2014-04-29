@@ -1,0 +1,174 @@
+<template name="tristateCharts">
+  {{> tristateChartDataSources }}
+  {{> presetTristateCharts }}
+</template>
+
+<template name="tristateChartDataSources">
+  {{#panel}}
+    {{> panelHeading icon="icon-table" title="Tristate Chart DataSources" }}
+    {{#panelBody}}
+      {{> csvTristateChartDataSource }}
+      {{> domTristateChartDataSource }}
+      {{> arrayTristateChartDataSource }}
+      {{> cursorTristateChartDataSource }}
+    {{/panelBody}}
+  {{/panel}}
+</template>
+
+<template name="csvTristateChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="CSV DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="tristate"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="domTristateChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="DOM DataSource" }}
+      {{#panelBody}}
+        {{#sparkline type="tristate" domSource="true" }}
+          {{sparklines.csvDataSeriesExample}}
+        {{/sparkline}}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="arrayTristateChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Array DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="tristate"
+            array=sparklines.arrayDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="cursorTristateChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="Cursor DataSource" }}
+      {{#panelBody}}
+        {{> sparkline
+            type="tristate"
+            cursor=sparklines.cursorDataSeriesExample
+            property="value"
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="defaultTristateChart">
+  <div class="col-md-4">
+    {{#panel}}
+      {{> panelHeading icon="icon-table" title="tristate-default" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="tristate-default"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="infoTristateChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-info" }}
+      {{> panelHeading icon="icon-table" title="tristate-info" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="tristate-info"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="warningTristateChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-warning" }}
+      {{> panelHeading icon="icon-table" title="tristate-warning" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="tristate-warning"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="primaryTristateChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-primary" }}
+      {{> panelHeading icon="icon-table" title="tristate-primary" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="tristate-primary"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="successTristateChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-success"}}
+      {{> panelHeading icon="icon-table" title="tristate-success" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="tristate-success"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="dangerTristateChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-danger"}}
+      {{> panelHeading icon="icon-table" title="tristate-danger" }}
+      {{#panelBody}}
+        {{> sparkline
+            styles="tristate-danger"
+            csv=sparklines.csvDataSeriesExample
+        }}
+      {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="presetTristateCharts">
+  {{#panel}}
+    {{> panelHeading icon="icon-table" title="Preset Tristate Charts" }}
+    {{#panelBody}}
+      <div class="row block">
+        {{> defaultTristateChart }}
+        {{> infoTristateChart }}
+        {{> warningTristateChart }}
+      </div>
+      <div class="row">
+        {{> primaryTristateChart }}
+        {{> successTristateChart }}
+        {{> dangerTristateChart }}
+      </div>
+    {{/panelBody}}
+  {{/panel}}
+</template>

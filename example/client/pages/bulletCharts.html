@@ -1,0 +1,174 @@
+<template name="bulletCharts">
+  {{> bulletChartDataSources }}
+  {{> presetBulletCharts }}
+</template>
+
+<template name="bulletChartDataSources">
+  {{#panel}}
+    {{> panelHeading icon="icon-table" title="Bullet Chart DataSources" }}
+    {{#panelBody}}
+      {{> csvBulletChartDataSource }}
+      {{> domBulletChartDataSource }}
+      {{> arrayBulletChartDataSource }}
+      {{> cursorBulletChartDataSource }}
+    {{/panelBody}}
+  {{/panel}}
+</template>
+
+<template name="csvBulletChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+    {{> panelHeading icon="icon-table" title="CSV DataSource" }}
+    {{#panelBody}}
+    {{> sparkline
+    type="bullet"
+    csv=sparklines.csvDataSeriesExample
+    }}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="domBulletChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+    {{> panelHeading icon="icon-table" title="DOM DataSource" }}
+    {{#panelBody}}
+    {{#sparkline type="bullet" domSource="true" }}
+    {{sparklines.csvDataSeriesExample}}
+    {{/sparkline}}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="arrayBulletChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+    {{> panelHeading icon="icon-table" title="Array DataSource" }}
+    {{#panelBody}}
+    {{> sparkline
+    type="bullet"
+    array=sparklines.arrayDataSeriesExample
+    }}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="cursorBulletChartDataSource">
+  <div class="col-md-3">
+    {{#panel}}
+    {{> panelHeading icon="icon-table" title="Cursor DataSource" }}
+    {{#panelBody}}
+    {{> sparkline
+    type="bullet"
+    cursor=sparklines.cursorDataSeriesExample
+    property="value"
+    }}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="defaultBulletChart">
+  <div class="col-md-4">
+    {{#panel}}
+    {{> panelHeading icon="icon-table" title="bullet-default" }}
+    {{#panelBody}}
+    {{> sparkline
+    styles="bullet-default"
+    csv=sparklines.csvDataSeriesExample
+    }}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="infoBulletChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-info" }}
+    {{> panelHeading icon="icon-table" title="bullet-info" }}
+    {{#panelBody}}
+    {{> sparkline
+    styles="bullet-info"
+    csv=sparklines.csvDataSeriesExample
+    }}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="warningBulletChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-warning" }}
+    {{> panelHeading icon="icon-table" title="bullet-warning" }}
+    {{#panelBody}}
+    {{> sparkline
+    styles="bullet-warning"
+    csv=sparklines.csvDataSeriesExample
+    }}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="primaryBulletChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-primary" }}
+    {{> panelHeading icon="icon-table" title="bullet-primary" }}
+    {{#panelBody}}
+    {{> sparkline
+    styles="bullet-primary"
+    csv=sparklines.csvDataSeriesExample
+    }}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="successBulletChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-success"}}
+    {{> panelHeading icon="icon-table" title="bullet-success" }}
+    {{#panelBody}}
+    {{> sparkline
+    styles="bullet-success"
+    csv=sparklines.csvDataSeriesExample
+    }}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="dangerBulletChart">
+  <div class="col-md-4">
+    {{#panel styles="panel-danger"}}
+    {{> panelHeading icon="icon-table" title="bullet-danger" }}
+    {{#panelBody}}
+    {{> sparkline
+    styles="bullet-danger"
+    csv=sparklines.csvDataSeriesExample
+    }}
+    {{/panelBody}}
+    {{/panel}}
+  </div>
+</template>
+
+<template name="presetBulletCharts">
+  {{#panel}}
+  {{> panelHeading icon="icon-table" title="Preset Bullet Charts" }}
+  {{#panelBody}}
+  <div class="row block">
+    {{> defaultBulletChart }}
+    {{> infoBulletChart }}
+    {{> warningBulletChart }}
+  </div>
+  <div class="row">
+    {{> primaryBulletChart }}
+    {{> successBulletChart }}
+    {{> dangerBulletChart }}
+  </div>
+  {{/panelBody}}
+  {{/panel}}
+</template>
