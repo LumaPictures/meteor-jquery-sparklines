@@ -8,13 +8,17 @@ A reactive blaze component for rendering live jQuery Sparklines.
 
 ## Usage
 
-By default sparkline will create a line graph with a selector of `sparkline-{guid}`
-
 There are four data sources that you can draw from.
  + CSV Datasource : `{{> sparkline csv="1,2,3,4" }}`
  + Array Datasource : `{{> sparkline array=someArray }}`
  + DOM Datasource : `{{#sparkline domSource="true" }} {{ someCSVData }} {{/sparkline}}`
  + Cursor Datasource : `{{> sparkline cursor=someCursor property="value" }}`
+
+By default sparkline will create a line graph with a selector of `sparkline-{guid}`
+
+If you need the selector for something else you can set it via the `selector` option.
+
+`{{> sparkline selector="my-sparkline" array=someArrayData }}`
 
 You can specify any of the types allowed by the sparklines plugin
  + [ Line ](http://sparklines.meteor.com/line-charts) : `{{> sparkline type="line" array=someArray }}`
