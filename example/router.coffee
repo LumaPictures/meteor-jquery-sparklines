@@ -110,7 +110,7 @@ Router.addRoutes [{
     subtitle: "Convenient blocks of data you can put anywhere."
 },{
   route: 'gitHub'
-  path: "https://github.com/austinrivas/meteor-sparklines"
+  path: "https://github.com/LumaPictures/meteor-jquery-sparklines"
   external: true
   page:
     title: "GitHub"
@@ -120,14 +120,14 @@ Router.addRoutes [{
     icon: 'icon-github'
 },{
   route: 'reportBugs'
-  path: "https://github.com/austinrivas/meteor-sparklines/issues/new"
+  path: "https://github.com/LumaPictures/meteor-jquery-sparklines/issues/new"
   external: true
   page:
     title: "Report Bugs"
     subtitle: "GitHub Issues"
 },{
   route: 'build'
-  path: "https://travis-ci.org/austinrivas/meteor-sparklines"
+  path: "https://travis-ci.org/LumaPictures/meteor-jquery-sparklines"
   external: true
   page:
     title: "Build Status"
