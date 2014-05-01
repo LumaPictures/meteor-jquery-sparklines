@@ -5,7 +5,7 @@
 
 standard-app-packages
 insecure
-sparklines
+jquery-sparklines
 luma-ui
 less
 coffeescript

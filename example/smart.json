@@ -1,6 +1,6 @@
 {
   "packages": {
-    "sparklines": {
+    "jquery-sparklines": {
       "path": ".."
     },
     "luma-ui": {}

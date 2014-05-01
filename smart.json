@@ -1,9 +1,9 @@
 {
-  "name": "sparklines",
+  "name": "jquery-sparklines",
   "description": "A reactive blaze component for rendering live jQuery Sparklines.",
-  "homepage": "https://github.com/austinrivas/meteor-sparklines",
+  "homepage": "https://github.com/lumapictures/meteor-jquery-sparklines",
   "author": "Austin Rivas <austinrivas@gmail.com> (http://github.com/austinrivas)",
-  "version": "2.0.0",
-  "git": "https://github.com/austinrivas/meteor-sparklines.git",
+  "version": "1.0.0",
+  "git": "https://github.com/lumapictures/meteor-jquery-sparklines.git",
   "packages": {}
 }

@@ -25,7 +25,7 @@ Package.on_use(function (api) {
 Package.on_test(function (api) {
   api.use([
     'coffeescript',
-    'sparklines',
+    'jquery-sparklines',
     'tinytest',
     'test-helpers'
   ], ['client', 'server']);

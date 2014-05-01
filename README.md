@@ -1,10 +1,10 @@
-Sparklines [![Build Status](https://travis-ci.org/austinrivas/meteor-sparklines.svg)](https://travis-ci.org/austinrivas/meteor-sparklines)
-==========
+jQuery Sparklines [![Build Status](https://travis-ci.org/lumapictures/meteor-jquery-sparklines.svg)](https://travis-ci.org/lumapictures/meteor-jquery-sparklines)
+=================
 
 A reactive blaze component for rendering live jQuery Sparklines.
 
 ## [ jQuery Sparklines Official Documentation ](http://omnipotent.net/jquery.sparkline/#s-docs)
-## [ Live Example ](http://sparklines.meteor.com)
+## [ Live Example ](http://jquery-sparklines.meteor.com)
 
 ## Usage
 
@@ -20,14 +20,14 @@ If you need the selector for something else you can set it via the `selector` op
 
 `{{> sparkline selector="my-sparkline" array=someArrayData }}`
 
-You can specify any of the types allowed by the sparklines plugin
- + [ Line ](http://sparklines.meteor.com/line-charts) : `{{> sparkline type="line" array=someArray }}`
- + [ Bar ](http://sparklines.meteor.com/bar-charts) : `{{> sparkline type="bar" array=someArray }}`
- + [ Tristate ](http://sparklines.meteor.com/tristate-charts): `{{> sparkline type="tristate" array=someArray }}`
- + [ Discrete ](http://sparklines.meteor.com/discrete-charts): `{{> sparkline type="discrete" array=someArray }}`
- + [ Bullet ](http://sparklines.meteor.com/bullet-charts) : `{{> sparkline type="bullet" array=someArray }}`
- + [ Pie ](http://sparklines.meteor.com/pie-charts) : `{{> sparkline type="pie" array=someArray }}`
- + [ Box Plots ](http://sparklines.meteor.com/box-charts) : `{{> sparkline type="box" array=someArray }}`
+You can specify any of the types allowed by the jquery-sparklines plugin
+ + [ Line ](http://jquery-sparklines.meteor.com/line-charts) : `{{> sparkline type="line" array=someArray }}`
+ + [ Bar ](http://jquery-sparklines.meteor.com/bar-charts) : `{{> sparkline type="bar" array=someArray }}`
+ + [ Tristate ](http://jquery-sparklines.meteor.com/tristate-charts): `{{> sparkline type="tristate" array=someArray }}`
+ + [ Discrete ](http://jquery-sparklines.meteor.com/discrete-charts): `{{> sparkline type="discrete" array=someArray }}`
+ + [ Bullet ](http://jquery-sparklines.meteor.com/bullet-charts) : `{{> sparkline type="bullet" array=someArray }}`
+ + [ Pie ](http://jquery-sparklines.meteor.com/pie-charts) : `{{> sparkline type="pie" array=someArray }}`
+ + [ Box Plots ](http://jquery-sparklines.meteor.com/box-charts) : `{{> sparkline type="box" array=someArray }}`
 
 You can also specify preset styles or pass in your own css classes
 ```html
@@ -45,25 +45,24 @@ Same goes for the sparklines configuration options
 }}
 ```
 
-The official sparklines docs has a pretty comprehensive list of options and [ great documentation ](http://omnipotent.net/jquery.sparkline/#s-docs).
+The official jquery-sparklines docs has a pretty comprehensive list of options and [ great documentation ](http://omnipotent.net/jquery.sparkline/#s-docs).
 
 ## Installing sparklines using Meteorite
 
 ```
-$ mrt add sparklines
+$ mrt add jquery-sparklines
 ```
 
 ### To run example locally
 ```
-$ git clone git://github.com/austinrivas/meteor-sparklines.git
-$ cd meteor-sparklines/example
-$ mrt add sparklines
-$ mrt add luma-ui
+$ git clone git://github.com/lumapictures/meteor-jquery-sparklines.git
+$ cd meteor-jquery-sparklines/example
+$ mrt
 $ meteor
 ```
 
 ### Tests
 ```
-$ cd meteor-sparklines/example
-$ mrt test-packages sparklines
+$ cd meteor-jquery-sparklines/example
+$ mrt test-packages jquery-sparklines
 ```
