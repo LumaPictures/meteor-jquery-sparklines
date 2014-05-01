@@ -1,4 +1,4 @@
-jQuery Sparklines [![Build Status](https://travis-ci.org/lumapictures/meteor-jquery-sparklines.svg)](https://travis-ci.org/lumapictures/meteor-jquery-sparklines)
+jQuery Sparklines [![Build Status](https://travis-ci.org/LumaPictures/meteor-jquery-sparklines.svg?branch=master)](https://travis-ci.org/LumaPictures/meteor-jquery-sparklines)
 =================
 
 A reactive blaze component for rendering live jQuery Sparklines.
