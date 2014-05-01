@@ -3,7 +3,7 @@ Router.addRoutes [{
   path: '/'
   controller: 'ExampleController'
   page:
-    title: "Sparklines"
+    title: "jQuery Sparklines"
     subtitle: "A reactive blaze component for rendering live jQuery Sparklines."
 },{
   route: 'lineCharts'
