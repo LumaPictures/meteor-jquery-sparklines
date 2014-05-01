@@ -8,6 +8,6 @@ class @ExampleController extends PackageLayoutController
     @data.package =
       name: "Sparklines"
       description: "jQuery Sparklines Reactive Blaze Component"
-      owner: "lumapictures"
+      owner: "LumaPictures"
       repo: "meteor-jquery-sparklines"
     super

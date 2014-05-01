@@ -3,7 +3,7 @@
   "description": "A reactive blaze component for rendering live jQuery Sparklines.",
   "homepage": "https://github.com/lumapictures/meteor-jquery-sparklines",
   "author": "Austin Rivas <austinrivas@gmail.com> (http://github.com/austinrivas)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "git": "https://github.com/lumapictures/meteor-jquery-sparklines.git",
   "packages": {}
 }
